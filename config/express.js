@@ -37,6 +37,13 @@ module.exports = function (app, passport) {
   // Static files middleware
   app.use(express.static(config.root + '/public'));
 
+  app.use(function(req, res, next) {
+    // I SHOULD ONLY ALLOW MY SITE ORIGIN HERE
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
   // Use winston on production
   var log;
   if (env !== 'development') {
