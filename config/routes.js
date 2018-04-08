@@ -16,7 +16,7 @@ module.exports = function (app, passport) {
   app.get('/', home.index);
   app.get('/status', status.getStatuses);
   // app.get('/test', status.testAddNew);
-  app.get('/makereq', status.makereq);
+  // app.get('/makereq', status.makereq);
   /**
    * Error handling
    */
