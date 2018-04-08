@@ -14,6 +14,7 @@ var statusSchema = new Schema({
   code: { type: String, default: '' },
   status: { type: String, default: '' },
   date: { type: Date, default: '' },
+  address: { type: String, default: '' },
 });
 
 /**
