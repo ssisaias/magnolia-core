@@ -1,11 +1,13 @@
 {
-  "name": "node-express-mongoose",
-  "description": "A boilerplate application for express mongoose",
+  "name": "magnolia-core",
+  "description": "",
   "version": "1.0.0",
   "author": {
-    "name": "Madhusudhan Srinivasa",
-    "email": "me@madhums.me"
+    "name": "Isaias",
+    "email": "luiz.isaias95@gmail.com"
   },
+  "license": "MIT",
+  "private": true,
   "engines": {
     "node": ">=6.x"
   },
@@ -51,10 +53,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/madhums/node-express-mongoose.git"
+    "url": ""
   },
   "keywords": [
-    "mvc",
-    "boilerplate"
+    
   ]
 }
