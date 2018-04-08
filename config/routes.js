@@ -5,6 +5,7 @@
  */
 
 const home = require('../app/controllers/home');
+const status = require('../app/controllers/statusCheck');
 
 /**
  * Expose
@@ -13,7 +14,8 @@ const home = require('../app/controllers/home');
 module.exports = function (app, passport) {
 
   app.get('/', home.index);
-
+  app.get('/status', status.getStatuses);
+  // app.get('/test', status.testAddNew);
   /**
    * Error handling
    */
