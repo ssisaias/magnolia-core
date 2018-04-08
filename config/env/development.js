@@ -1,10 +1,10 @@
-
+const mongoUrl = process.env.MONGO_URL;
 /**
  * Expose
  */
 
-module.exports = {
-  db: 'mongodb://localhost/your_project_development',
+module.exports = {  
+  db: mongoUrl,
   facebook: {
     clientID: 'APP_ID',
     clientSecret: 'SECRET',
