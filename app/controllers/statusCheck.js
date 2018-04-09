@@ -4,7 +4,7 @@ var schedule = require('node-schedule');
 
 var URLS_TO_VERIFY = process.env.URLS_TO_CHECK;
 const REQUEST_INTERVAL = process.env.REQUEST_INTERVAL;
-
+URLS_TO_VERIFY = JSON.parse(URLS_TO_VERIFY);
 // this is where the magic happens
 schedule.scheduleJob(REQUEST_INTERVAL, function (){
     makereq();
@@ -46,7 +46,6 @@ exports.testAddNew = (req, res, next) => {
 
 /* Make a requisition to sistemas.quixada.ufc*/
 var makereq = (req, res, next) => {
-    URLS_TO_VERIFY = JSON.parse(URLS_TO_VERIFY);
     console.log(URLS_TO_VERIFY);
     URLS_TO_VERIFY.forEach(targetUrl => {
         console.log('Trying To HIT: ' + targetUrl);
